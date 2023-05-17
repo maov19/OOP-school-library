@@ -98,7 +98,7 @@ For tracking linter errors locally you need to follow these steps:
 
 1. For tracking linter errors in Ruby files run:
 ```bash 
-gem rubocop
+rubocop
 ```
 
 <!-- AUTHOR -->
