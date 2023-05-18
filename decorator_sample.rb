@@ -7,7 +7,6 @@ require_relative 'classroom'
 require_relative 'student'
 require_relative 'book'
 
-
 def run_example
   person = Person.new(22, 'maximilianus')
   puts person.correct_name
