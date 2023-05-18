@@ -1,16 +1,15 @@
 require_relative 'student'
 
 class Classroom
-    attr_accessor :subject, :students
-  
-    def initialize(subject)
-      @subject = subject
-      @students = []
-    end
-  
-    def add_student(student)
-      @students << student
-      student.classroom = self
-    end
+  attr_accessor :label, :students
+
+  def initialize(label)
+    @label = label
+    @students = []
   end
-  
+
+  def add_student(student)
+    @students << student
+    student.classroom = self
+  end
+end

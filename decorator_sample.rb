@@ -18,4 +18,3 @@ def run_example
 end
 
 run_example
-
