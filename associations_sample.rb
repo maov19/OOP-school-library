@@ -33,15 +33,10 @@ person2 = Person.new(32, 'Martin')
 book = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
 book2 = Book.new('1984', 'George Orwell')
 
-# Create a Rental
-rental = Rental.new('01-01-2023', book, person)
-rental2 = Rental.new('02-01-2023', book2, person2)
-rental3 = Rental.new('03-01-2023', book, person2)
-
 # Add the Rental to the Book
-book.add_rental(rental)
-book2.add_rental(rental2)
-book.add_rental(rental3)
+book.add_rental(person, '01-01-2023')
+book2.add_rental(person2, '02-01-2023')
+book.add_rental(person2, '02-01-2023')
 
 # Print the rentals of the Book
 puts "Rentals of #{book.title}:"
