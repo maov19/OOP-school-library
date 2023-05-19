@@ -12,7 +12,7 @@ class Student < Person
     '¯\\_(ツ)_/¯'
   end
 
-  def classroom=(classroom)
+  def classroom_association=(classroom)
     @classroom = classroom
     classroom.students.push(self) unless classroom.students.include?(self)
   end
