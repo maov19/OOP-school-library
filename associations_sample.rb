@@ -15,7 +15,7 @@ classroom.add_student(student1)
 classroom.add_student(student2)
 
 # Print students in the classroom
-puts "Students in #{classroom.label} classroom:"
+puts "Student in #{classroom.label} classroom:"
 classroom.students.each do |student|
   puts "- #{student.name}"
 end
