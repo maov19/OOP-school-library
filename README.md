@@ -1,23 +1,22 @@
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 OOP School Library ](#-oop-school-library-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+  - [Run Test for Linters](#run-test-for-linters)
+  - [💻 Getting Started ](#-getting-started--1)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -110,6 +109,12 @@ rubocop
 - GitHub: [@maov19](https://github.com/maov19)
 - Twitter: [@maov08](https://twitter.com/maov08)
 - LinkedIn: [Martin Ossa](https://linkedin.com/in/martin-ossa)
+
+👤 **Michael Kithinji**
+
+- GitHub: [@githubhandle](https://github.com/MICHAELKITH)
+- Twitter: [@twitterhandle](https://twitter.com/DevMichael11)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/michaelkithinji/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
