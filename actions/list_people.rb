@@ -1,4 +1,3 @@
-list_people_rb
 require_relative '../models/person'
 require_relative '../models/student'
 require_relative '../models/teacher'
