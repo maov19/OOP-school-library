@@ -28,14 +28,13 @@ class Person < Nameable
 
   def self.from_json(json)
     data = JSON.parse(json)
-    person = Person.new(data['age'], data['name'])
-    person
+    Person.new(data['age'], data['name'])
   end
 
   def to_json(*_args)
     {
       'name' => @name,
-      'age' => @age,
+      'age' => @age
     }.to_json
   end
 
