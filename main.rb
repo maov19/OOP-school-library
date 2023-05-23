@@ -2,11 +2,13 @@ require_relative 'app'
 
 def main
   books = [
-    # Book.new('Book 1', 'Author 1')
+    Book.new('Book 1', 'Author 1'),
+    Book.new('Book 2', 'Author 2')
   ]
 
   people = [
-    # Student.new(18, 'Classroom 1', 'Alice')
+    Person.new(18, 'Alice'),
+    Person.new(20, 'Bob')
   ]
 
   rentals = []
