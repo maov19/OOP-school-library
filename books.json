@@ -1,5 +1,6 @@
 [
-  "{\"title\":\"Book 1\",\"author\":\"Author 1\",\"rentals\":[]}",
-  "{\"title\":\"a book\",\"author\":\"an author\",\"rentals\":[]}",
-  "{\"title\":\"mikes book\",\"author\":\"mike\",\"rentals\":[]}"
+  "{\"title\":\"Book 1\",\"author\":\"Author 1\"}",
+  "{\"title\":\"a book\",\"author\":\"an author\"}",
+  "{\"title\":\"other book\",\"author\":\"other author\"}",
+  "{\"title\":\"test\",\"author\":\"test\"}"
 ]

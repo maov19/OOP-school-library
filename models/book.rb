@@ -18,17 +18,12 @@ class Book
     {
       'title' => @title,
       'author' => @author,
-      'rentals' => @rentals.map(&:to_json)
+      # 'rentals' => @rentals.map(&:to_json)
     }.to_json
   end
 
   def self.from_json(json)
     data = JSON.parse(json)
-    book = Book.new(data['title'], data['author'])
-    data['rentals'].each do |rental_json|
-      rental = Rental.from_json(rental_json)
-      book.rentals << rental
-    end
-    book
+    Book.new(data['title'], data['author'])
   end
 end
