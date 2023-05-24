@@ -1,6 +1,5 @@
 require_relative 'helper_spec'
 
-
 describe Classroom do
   let(:student1) { Student.new(25, 'Maximilianus', true) }
   let(:student2) { Student.new(13, 'Zeus', false) }

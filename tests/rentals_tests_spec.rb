@@ -1,6 +1,5 @@
 require_relative 'helper_spec'
 
-
 describe Rental do
   let(:book) { Book.new('Title', 'Author') }
   let(:person) { Person.new(25, 'John Doe') }

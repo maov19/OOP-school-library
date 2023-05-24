@@ -38,7 +38,6 @@ describe Person do
     end
   end
 
-
   it 'adds new rental for this person' do
     @person1.add_rental(@book, '15-03-2023')
     expect(@person1.rentals.last.date).to eql '15-03-2023'
