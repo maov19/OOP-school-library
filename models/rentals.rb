@@ -42,27 +42,27 @@ class Rental
         'author' => @book.author
       },
       'person' => {
-        'name' => @person.name,
-        'age' => @person.age
+        'age' => @person.age,
+        'name' => @person.name
       }
     }.to_json
   end
   
 
-  def self.from_json(json)
-    data = JSON.parse(json)
-    date = data['date']
-    book_data = data['book']
-    person_data = data['person']
-    book = Book.from_json(book_data)
-    person = Person.from_json(person_data)
-    Rental.new(date, book, person)
-  end
-
   # def self.from_json(json)
   #   data = JSON.parse(json)
-  #   book = Book.new(data['book']['title'], data['book']['author'])
-  #   person = Person.new(data['person']['name'], data['person']['age'])
-  #   Rental.new(data['date'], book, person)
+  #   date = data['date']
+  #   book_data = data['book']
+  #   person_data = data['person']
+  #   book = Book.from_json(book_data)
+  #   person = Person.from_json(person_data)
+  #   Rental.new(date, book, person)
   # end
+
+  def self.from_json(json)
+    data = JSON.parse(json)
+    book = Book.new(data['book']['title'], data['book']['author'])
+    person = Person.new(data['person']['age'], data['person']['name'])
+    Rental.new(data['date'], book, person)
+  end
 end
