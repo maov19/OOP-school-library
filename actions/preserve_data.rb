@@ -82,18 +82,38 @@ class PreserveData
     puts 'Error parsing people.json file:', e.message
   end
 
+  # def load_rentals
+  #   if File.exist?('rentals.json')
+  #     rentals_file = File.read('rentals.json')
+  #     rentals_data = JSON.parse(rentals_file)
+  #     @rentals.clear
+  #     rentals_data.each do |rental_json|
+  #       book_hash = rental_json['book']
+  #       person_hash = rental_json['person']
+  #       book = Book.new(book_hash['title'], book_hash['author'])
+  #       person = Person.new(person_hash['name'], person_hash['age'])
+  #       rental = Rental.new(rental_json['date'], book, person)
+  #       @rentals << rental
+  #     end
+  #   else
+  #     puts 'No rentals data file found.'
+  #   end
+  # rescue JSON::ParserError => e
+  #   puts 'Error parsing rentals.json file:', e.message
+  # end
+
   def load_rentals
     if File.exist?('rentals.json')
       rentals_file = File.read('rentals.json')
       rentals_data = JSON.parse(rentals_file)
       @rentals.clear
       rentals_data.each do |rental_json|
-        rental_hash = JSON.parse(rental_json)
-        book_hash = rental_hash['book']
-        person_hash = rental_hash['person']
+        book_hash = rental_json['book']
+        person_hash = rental_json['person']
         book = Book.new(book_hash['title'], book_hash['author'])
-        person = Person.new(person_hash['name'], person_hash['age'])
-        rental = Rental.new(rental_hash['date'], book, person)
+        person = Person.new(person_hash['age'], person_hash['name'])
+        rental = Rental.new(rental_json['date'], book, person)
+        person.add_rental(book, rental_json['date'] ) # Add rental to the person's rentals
         @rentals << rental
       end
     else
@@ -102,6 +122,8 @@ class PreserveData
   rescue JSON::ParserError => e
     puts 'Error parsing rentals.json file:', e.message
   end
+  
+  
   
   
   
