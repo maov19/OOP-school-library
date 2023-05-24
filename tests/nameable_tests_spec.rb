@@ -5,7 +5,7 @@ class SampleClass < Nameable
 end
 
 describe Nameable do
-    let (:nameable) {SampleClass.new}
+  let(:nameable) { SampleClass.new }
 
   describe '#correct_name' do
     it 'raises NotImplementedError' do
