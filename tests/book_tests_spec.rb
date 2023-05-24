@@ -1,11 +1,9 @@
 require_relative 'helper_spec'
 
 describe Book do
-  # let(:date) { '24-05-2023' }
   before :each do
     @book = Book.new('Title', 'Author')
     @person = Person.new(20, 'Mike')
-    # @rentals = Rental.new(date, book, person)
   end
 
   describe '#new' do
