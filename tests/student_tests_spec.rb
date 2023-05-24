@@ -1,6 +1,4 @@
-require 'rspec'
-require_relative '../models/student'
-require_relative '../models/classroom'
+require_relative 'helper_spec'
 
 describe Student do
     let(:classroom) { Classroom.new('Basic Test') }

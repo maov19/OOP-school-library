@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../utils/nameable'
+require_relative 'helper_spec'
 
 class SampleClass < Nameable
 end

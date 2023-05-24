@@ -1,9 +1,4 @@
-require 'rspec'
-require 'json'
-require_relative '../models/rentals'
-require_relative '../models/book'
-require_relative '../models/person'
-require_relative '../models/classroom'
+require_relative 'helper_spec'
 
 
 describe Classroom do

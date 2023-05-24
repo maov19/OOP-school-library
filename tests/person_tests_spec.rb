@@ -1,6 +1,4 @@
-require 'rspec'
-require 'json'
-require_relative '../models/person'
+require_relative 'helper_spec'
 
 describe Person do
 

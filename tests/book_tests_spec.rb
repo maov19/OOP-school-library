@@ -1,8 +1,4 @@
-require 'rspec'
-require 'json'
-require_relative '../models/rentals'
-require_relative '../models/book'
-require_relative '../models/person'
+require_relative 'helper_spec'
 
 describe Book do
     # let(:date) { '24-05-2023' }

@@ -1,5 +1,4 @@
-require 'rspec'
-require_relative '../utils/capitalize_decorator'
+require_relative 'helper_spec'
 
 class MockNameable
   attr_reader :name
