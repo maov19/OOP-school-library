@@ -36,11 +36,6 @@ class PreserveData
     File.write('people.json', JSON.pretty_generate(@people.map(&:to_json)))
   end
 
-  # def save_rentals
-  #   rentals_data = @rentals.map { |rental| rental.to_json }
-  #   File.write('rentals.json', JSON.pretty_generate(rentals_data))
-  # end
-
   def save_rentals
     rentals_data = @rentals.map(&:to_json)
     File.open('rentals.json', 'w') do |file|
@@ -81,26 +76,6 @@ class PreserveData
   rescue JSON::ParserError => e
     puts 'Error parsing people.json file:', e.message
   end
-
-  # def load_rentals
-  #   if File.exist?('rentals.json')
-  #     rentals_file = File.read('rentals.json')
-  #     rentals_data = JSON.parse(rentals_file)
-  #     @rentals.clear
-  #     rentals_data.each do |rental_json|
-  #       book_hash = rental_json['book']
-  #       person_hash = rental_json['person']
-  #       book = Book.new(book_hash['title'], book_hash['author'])
-  #       person = Person.new(person_hash['name'], person_hash['age'])
-  #       rental = Rental.new(rental_json['date'], book, person)
-  #       @rentals << rental
-  #     end
-  #   else
-  #     puts 'No rentals data file found.'
-  #   end
-  # rescue JSON::ParserError => e
-  #   puts 'Error parsing rentals.json file:', e.message
-  # end
 
   def load_rentals
     if File.exist?('rentals.json')
