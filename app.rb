@@ -18,7 +18,7 @@ class App
       3 => CreatePersonAction.new(people),
       4 => CreateBookAction.new(books),
       5 => CreateRentalAction.new(books, people, rentals),
-      6 => ListRentalsAction.new(people)
+      6 => ListRentalsAction.new(people, rentals)
     }
     @data_preserver = PreserveData.new(books, people, rentals)
   end
