@@ -1,0 +1,10 @@
+Class - Tester
+Book - Mike
+Person - Mike
+Student - Mike
+Teacher - Mike
+Classroom - Mike
+Rental - Martin
+BaseDecorator - Martin
+Nameable - Martin
+capitalize_decorator - Martin 
