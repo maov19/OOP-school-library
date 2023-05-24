@@ -48,7 +48,7 @@ class PreserveData
       file.write(rentals_data.join(",\n"))
       file.write("\n]")
     end
-  end  
+  end
 
   def load_books
     if File.exist?('books.json')
@@ -113,7 +113,7 @@ class PreserveData
         book = Book.new(book_hash['title'], book_hash['author'])
         person = Person.new(person_hash['age'], person_hash['name'])
         rental = Rental.new(rental_json['date'], book, person)
-        person.add_rental(book, rental_json['date'] ) # Add rental to the person's rentals
+        person.add_rental(book, rental_json['date']) # Add rental to the person's rentals
         @rentals << rental
       end
     else
@@ -122,9 +122,4 @@ class PreserveData
   rescue JSON::ParserError => e
     puts 'Error parsing rentals.json file:', e.message
   end
-  
-  
-  
-  
-  
 end

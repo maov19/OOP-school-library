@@ -1,7 +1,3 @@
 [
-  "{\"name\":\"Alice\",\"age\":18}",
-  "{\"name\":\"martin\",\"age\":32}",
-  "{\"name\":\"mike\",\"age\":22}",
-  "{\"name\":\"jose\",\"age\":22}",
-  "{\"name\":\"test\",\"age\":22}"
+  "{\"name\":\"martin\",\"age\":12}"
 ]

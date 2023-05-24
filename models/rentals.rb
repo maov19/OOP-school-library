@@ -47,7 +47,7 @@ class Rental
       }
     }.to_json
   end
-  
+
 
   # def self.from_json(json)
   #   data = JSON.parse(json)
