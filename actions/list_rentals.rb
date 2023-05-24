@@ -1,14 +1,8 @@
-require_relative '../models/person'
-require_relative '../models/student'
-require_relative '../models/teacher'
-require_relative '../models/classroom'
-require_relative '../models/book'
-require_relative '../models/rentals'
-
-# 6. List rentals
+# List rentals
 class ListRentalsAction
-  def initialize(people)
+  def initialize(people, rentals)
     @people = people
+    @rentals = rentals
   end
 
   def execute
@@ -21,10 +15,15 @@ class ListRentalsAction
     else
       puts '----------------------------------------'
       puts "Rentals for #{person.name}:"
-      person.rentals.each do |rental|
-        puts "- #{rental.date} - #{rental.book.title}"
-        puts '----------------------------------------'
+      person_rentals = find_rentals_by_person(person)
+      if person_rentals.empty?
+        puts 'No rentals found.'
+      else
+        person_rentals.each do |rental|
+          puts "- #{rental.date} - #{rental.book.title}"
+        end
       end
+      puts '----------------------------------------'
     end
   end
 
@@ -32,5 +31,9 @@ class ListRentalsAction
 
   def find_person_by_name(name)
     @people.find { |person| person.name.downcase == name.downcase }
+  end
+
+  def find_rentals_by_person(person)
+    @rentals.select { |rental| rental.person.name == person.name }
   end
 end
