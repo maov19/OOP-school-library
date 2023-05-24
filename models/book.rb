@@ -17,7 +17,7 @@ class Book
   def to_json(*_args)
     {
       'title' => @title,
-      'author' => @author,
+      'author' => @author
       # 'rentals' => @rentals.map(&:to_json)
     }.to_json
   end

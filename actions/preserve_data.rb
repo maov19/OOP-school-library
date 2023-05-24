@@ -30,7 +30,7 @@ class PreserveData
 
   def save_books
     File.write('books.json', JSON.pretty_generate(@books.map(&:to_json)))
-  end 
+  end
 
   def save_people
     File.write('people.json', JSON.pretty_generate(@people.map(&:to_json)))
@@ -56,7 +56,7 @@ class PreserveData
   rescue JSON::ParserError => e
     puts 'Error parsing books.json file:', e.message
   end
-  
+
   def load_people
     if File.exist?('people.json')
       people_file = File.read('people.json')
@@ -71,7 +71,7 @@ class PreserveData
     end
   rescue JSON::ParserError => e
     puts 'Error parsing people.json file:', e.message
-  end 
+  end
 
   def load_rentals
     if File.exist?('rentals.json')
