@@ -37,10 +37,17 @@ class Rental
   def to_json(*_args)
     {
       'date' => @date,
-      'book' => @book.to_json,
-      'person' => @person.to_json
+      'book' => {
+        'title' => @book.title,
+        'author' => @book.author
+      },
+      'person' => {
+        'name' => @person.name,
+        'age' => @person.age
+      }
     }.to_json
   end
+  
 
   def self.from_json(json)
     data = JSON.parse(json)
@@ -51,4 +58,11 @@ class Rental
     person = Person.from_json(person_data)
     Rental.new(date, book, person)
   end
+
+  # def self.from_json(json)
+  #   data = JSON.parse(json)
+  #   book = Book.new(data['book']['title'], data['book']['author'])
+  #   person = Person.new(data['person']['name'], data['person']['age'])
+  #   Rental.new(data['date'], book, person)
+  # end
 end
