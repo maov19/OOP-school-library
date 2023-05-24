@@ -7,9 +7,10 @@ require_relative '../models/rentals'
 
 # 5. Create rental
 class CreateRentalAction
-  def initialize(books, people)
+  def initialize(books, people, rentals)
     @books = books
     @people = people
+    @rentals = rentals
   end
 
   def execute
@@ -25,7 +26,8 @@ class CreateRentalAction
     rental_date = gets.chomp
 
     if book && person
-      rental = book.add_rental(person, rental_date)
+      rental = Rental.new(rental_date, book, person)
+      @rentals << rental
       puts '----------------------------------------'
       puts "Rental created: #{rental.date} - #{rental.book.title} - #{rental.person.name}"
     else
