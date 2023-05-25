@@ -9,7 +9,7 @@ describe Solver do
     end
 
     it 'returns "No factorial for negative integers"' do
-      negative = Solver.new
+      Solver.new
       expect { resolver.factorial(-5) }.to raise_exception
     end
   end
