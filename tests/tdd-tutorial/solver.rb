@@ -1,9 +1,9 @@
 class Solver
-  def factorial(num)
-    return 'No factorial for negative integers' if num.negative?
+  def factorial(number)
+    return 'No factorial for negative integers' if number.negative?
 
     sum = 1
-    (1..num).each do |i|
+    (1..number).each do |i|
       sum *= i
     end
 
@@ -23,14 +23,15 @@ class Solver
     reversed
   end
 
-  def fizzbuzz(n)
-    return 'fizzbuzz' if (n % 3).zero? && (n % 5).zero?
-    return 'fizz' if (n % 3).zero?
-    return 'buzz' if (n % 5).zero?
+  def fizzbuzz(number)
+    return 'fizzbuzz' if (number % 3).zero? && (number % 5).zero?
+    return 'fizz' if (number % 3).zero?
+    return 'buzz' if (number % 5).zero?
 
-    n.to_s
+    number.to_s
   end
 end
 
-string = Solver.new
-p string.reverse('hello')
+solver = Solver.new
+reversed_string = solver.reverse('hello')
+puts reversed_string
