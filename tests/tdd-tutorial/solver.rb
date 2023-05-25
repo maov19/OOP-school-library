@@ -3,19 +3,32 @@
 # The factorial is the multiplication of all integers from 1 to N and has the special case that the factorial of 0 is 1.
 # This method only accepts 0 and positive integers, so if a negative integer is given it should raise an exception.
 class Solver
-    def factorial(n)
-        if n < 0
-            return "No factorial for negative integers"
-        else
-            sum = 1
-            for i in 1..n do
-                sum *= i
-            end
-        end
-        sum
+  def factorial(num)
+    return 'No factorial for negative integers' if num.negative?
+
+
+    sum = 1
+    (1..num).each do |i|
+      sum *= i
     end
+
+
+    sum
   end
 
-  number = Solver.new
-  p number.factorial(-1)
-  
+  def reverse(string)
+    arr = string.chars
+    char = arr.length - 1
+    reversed = ''
+
+    while char >= 0
+      reversed << arr[char]
+      char -= 1
+    end
+
+    reversed
+  end
+end
+
+string = Solver.new
+p string.reverse('hello')
