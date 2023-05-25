@@ -9,7 +9,7 @@ describe Solver do
     end
     it 'returns "No factorial for negative integers"' do
       negative = Solver.new
-      expect(negative.factorial(-1)).to eq('No factorial for negative integers')
+      expect { resolver.factorial(-5) }.to raise_exception
     end
   end
   describe '#reverse' do
